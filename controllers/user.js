@@ -2,7 +2,7 @@ import User from "../models/user.js";
 
 export function signin(req, res) {
     User
-    .findOne({ "username": req.body.username, "password": req.body.password })
+    .findOne({ "id": req.body.id, "password": req.body.password })
     .then(doc => {
         res.status(200).json(doc);
     })
@@ -15,6 +15,7 @@ export function signup(req, res) {
   User.create(req.body)
     .then((newUser) => {
       res.status(200).json({
+        id:newUser.id,
         username: newUser.username,
         password: newUser.password,
         email: newUser.email,
