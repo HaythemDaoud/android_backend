@@ -5,8 +5,7 @@
   "main": "backend.js",
   "type": "module",
   "scripts": {
-    "start": "node backend.js",
-    "dev": "nodemon backend.js"
+    "start": "nodemon backend.js"
   },
   "keywords": [],
   "author": "",

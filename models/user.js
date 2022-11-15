@@ -18,11 +18,13 @@ const userSchema = new Schema(
         email: {
             type: String,
             required: true
+        },
+        confirm: {
+            type: Boolean,
+            default: false
         }
     },
-    {
-        timestamps: true
-    }
+    
 );
 
 export default model('User', userSchema);
