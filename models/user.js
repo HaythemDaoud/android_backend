@@ -7,10 +7,6 @@ const userSchema = new Schema(
             type: String,
             required: true
         },
-        id: {
-            type: String,
-            required: true
-        },
         password: {
             type: String,
             required: true
@@ -22,7 +18,16 @@ const userSchema = new Schema(
         confirm: {
             type: Boolean,
             default: false
-        }
+        },
+        usertype:{
+            type:String,
+            default: "student"
+        },
+        groups:{
+            type: String,
+            default: ""
+                }
+
     },
     
 );

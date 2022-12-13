@@ -1,6 +1,6 @@
 import express from 'express';
 
-import { signin, signup, } from '../controllers/user.js';
+import { addgroup, signin, signup, } from '../controllers/user.js';
   
 const router = express.Router();
 
@@ -11,6 +11,10 @@ router
 router
   .route('/signup')
   .post(signup);
+
+  router
+  .route('/:usermail/:groupid')
+  .post(addgroup);
 
 
 export default router;

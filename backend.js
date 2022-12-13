@@ -2,7 +2,10 @@ import express from 'express';
 import mongoose from 'mongoose';
 
 
+
 import userRoutes from './routes/user.js';
+import taskRoutes from './routes/task.js';
+import projectRoutes from './routes/project.js';
 
 
 const app = express();
@@ -24,6 +27,10 @@ mongoose
 app.use(express.json());
 
 app.use('/user', userRoutes);
+
+app.use('/task', taskRoutes);
+
+app.use('/project',projectRoutes);
 
 
 app.listen(port, () => {
