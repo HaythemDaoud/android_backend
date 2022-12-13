@@ -16,7 +16,7 @@ mongoose.set('debug', true);
 mongoose.Promise = global.Promise;
 
 mongoose
-  .connect(`mongodb://localhost:27017/${databaseName}`)
+  .connect(`mongodb://mongo:CosZ2MYtAjd9Efc8vXBL@containers-us-west-79.railway.app:7781`)
   .then(() => {
     console.log(`Connected to ${databaseName}`);
   })
