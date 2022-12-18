@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import Project from "../models/project.js";
 const { Schema, model } = mongoose;
 
 const userSchema = new Schema(
@@ -23,10 +24,10 @@ const userSchema = new Schema(
             type:String,
             default: "student"
         },
-        groups:{
-            type: String,
-            default: ""
-                }
+        groups:[{
+            type: Schema.Types.ObjectId,
+            ref: Project
+                }]
 
     },
     

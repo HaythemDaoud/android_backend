@@ -16,7 +16,8 @@ mongoose.set('debug', true);
 mongoose.Promise = global.Promise;
 
 mongoose
-  .connect(`mongodb://mongo:CosZ2MYtAjd9Efc8vXBL@containers-us-west-79.railway.app:7781`)
+  //.connect(`mongodb://mongo:CosZ2MYtAjd9Efc8vXBL@containers-us-west-79.railway.app:7781`)
+  .connect(`mongodb://localhost:27017/${databaseName}`)
   .then(() => {
     console.log(`Connected to ${databaseName}`);
   })
@@ -25,6 +26,8 @@ mongoose
   });
 
 app.use(express.json());
+app.use(express.urlencoded({extended:false}))
+app.set('view engine','ejs')
 
 app.use('/user', userRoutes);
 
