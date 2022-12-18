@@ -1,6 +1,6 @@
 const express = require('express');
 const { errorHandler } = require('./middleware/errorMiddleware');
-//const connectDB = require('./config/db');
+const connectDB = require('./config/db');
 const port = process.env.PORT || 9090;
 
 //connectDB();
